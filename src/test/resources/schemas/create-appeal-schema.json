@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "appealId": {
+      "type": "string"
+    },
+    "objectName": {
+      "type": "string"
+    },
+    "objectKind": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "appealNumber": {
+      "type": "string"
+    },
+    "appealDate": {
+      "type": "string"
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "login": {
+          "type": "string"
+        },
+        "fio": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        }
+      }
+    },
+    "createDate": {
+      "type": "string"
+    },
+    "changeDate": {
+      "type": "string"
+    },
+    "objectDocuments": {
+      "type": "string"
+    },
+    "serviceDocsInfo": {
+      "type": "string"
+    },
+    "reqVersion": {
+      "type": "string"
+    }
+  }
+}
