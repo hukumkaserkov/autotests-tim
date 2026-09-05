@@ -22,7 +22,7 @@
         }
       }
     },
-    "appealNumber": {
+    "appealNum": {
       "type": "string"
     },
     "appealDate": {

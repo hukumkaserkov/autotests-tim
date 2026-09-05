@@ -21,14 +21,14 @@ public class FilesHelpers {
 
     // добавляем 1 файл
     public Response createNewFile(){
-        String endpoint = "/ws-filelibrary/v1/file/create";
+        String endpoint = "/filestore/v1/file/create";
         File file = new File("src/test/resources/files/ifc/К02_КР_П_R24.ifc");
         return transport.postRequestWithFile(endpoint, file);
     }
 
     // добавляем несколько count количество файлов из папки
     public void createSomeFiles(int count) {
-        String endpoint = "/ws-filelibrary/v1/file/create";
+        String endpoint = "/filestore/v1/file/create";
         File folder = new File("src/test/resources/files/ifc");
         File[] files = folder.listFiles();
 
@@ -43,9 +43,9 @@ public class FilesHelpers {
     public Response addFileInUngroupedHelper(String appealId,
                                    CreateFileResponse fileData){
 
-        String endpoint = "/ws-appeals/v1/appeals/{appealId}/files/ungrouped";
+        String endpoint = "/appeals/v1/appeal/{id}/files/ungrouped";
         FileDto bodyDto = new FileDto(fileData.getId(), fileData.getName(), fileData.getFileExt(),
-                fileData.getCreateDate(), fileData.getSize(), "NIKTEST");
+                fileData.getCreateDate(), fileData.getSize(), "TEST");
         List<FileDto> body = List.of(bodyDto);
         return transport.postRequestWithParamsNoChecks(endpoint, "appealId", appealId, body);
     }
@@ -53,7 +53,7 @@ public class FilesHelpers {
     // Запрос всех файлов, которые есть в обращении
     public Response getAllfilesInAppeal(String appealId){
 
-        String endpoint = "/ws-appeals/v1/appeals/{appealId}/files/advsrch";
+        String endpoint = "/appeals/v1/appeals/{appealId}/files/srch";
         String body = "{}";
         return transport.postRequestWithParamsNoChecks(endpoint, "appealId", appealId, body);
     }
@@ -65,10 +65,10 @@ public class FilesHelpers {
         Response response = createNewFile();
         CreateFileResponse fileData = response.as(CreateFileResponse.class);
 
-        String endpoint = "/ws-appeals/v1/appeals/{appealId}/files";
+        String endpoint = "/appeals/v1/appeal/{id}/files";
         // ниже мы разбили тело на 3 ДТО и собрали из них тело запроса
         FileDto filesDto = new FileDto(fileData.getId(), fileData.getName(), fileData.getFileExt(),
-                fileData.getCreateDate(), fileData.getSize(), "NIKTEST");
+                fileData.getCreateDate(), fileData.getSize(), "TEST");
         AppealGroupDto<List<FileDto>> appealGroupDto = new AppealGroupDto<>(groupId, groupName,
                 groupNick, List.of(filesDto));
         AddFileInGroupRequest<List<FileDto>> body = new AddFileInGroupRequest<>(appealGroupDto);
