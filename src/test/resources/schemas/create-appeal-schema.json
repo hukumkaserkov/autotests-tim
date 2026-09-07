@@ -48,13 +48,13 @@
     "changeDate": {
       "type": "string"
     },
-    "objectDocuments": {
+    "objectDoc": {
       "type": "string"
     },
-    "serviceDocsInfo": {
+    "serviceDoc": {
       "type": "string"
     },
-    "reqVersion": {
+    "reqVers": {
       "type": "string"
     }
   }

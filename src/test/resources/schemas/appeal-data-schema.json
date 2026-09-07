@@ -17,25 +17,25 @@
     "objectWorkType": {
       "$ref": "#/definitions/IdNameCodeObject"
     },
-    "objectFunctionalPurpose": {
+    "objectPurpose": {
       "$ref": "#/definitions/IdNameCodeObject"
     },
     "address": {
       "$ref": "#/definitions/Address"
     },
-    "appealNumber": {
+    "appealNumb": {
       "type": "string"
     },
     "appealDate": {
       "type": "string"
     },
-    "caseNumber": {
+    "caseNum": {
       "type": ["string", "null"]
     },
     "caseDate": {
       "type": ["string", "null"]
     },
-    "applicationNumber": {
+    "application": {
       "type": ["string", "null"]
     },
     "applicationDate": {
@@ -168,7 +168,7 @@
         "region": {
           "type": ["string", "null"]
         },
-        "city": {
+        "town": {
           "type": ["string", "null"]
         },
         "locality": {
