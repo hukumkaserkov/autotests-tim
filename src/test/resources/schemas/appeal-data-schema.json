@@ -1,0 +1,263 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "appealId": {
+      "type": "string"
+    },
+    "objectName": {
+      "type": "string"
+    },
+    "objectKind": {
+      "$ref": "#/definitions/IdNameCodeObject"
+    },
+    "objectStage": {
+      "$ref": "#/definitions/IdNameCodeObject"
+    },
+    "objectWorkType": {
+      "$ref": "#/definitions/IdNameCodeObject"
+    },
+    "objectFunctionalPurpose": {
+      "$ref": "#/definitions/IdNameCodeObject"
+    },
+    "address": {
+      "$ref": "#/definitions/Address"
+    },
+    "appealNumber": {
+      "type": "string"
+    },
+    "appealDate": {
+      "type": "string"
+    },
+    "caseNumber": {
+      "type": ["string", "null"]
+    },
+    "caseDate": {
+      "type": ["string", "null"]
+    },
+    "applicationNumber": {
+      "type": ["string", "null"]
+    },
+    "applicationDate": {
+      "type": ["string", "null"]
+    },
+    "serviceCost": {
+      "type": "integer"
+    },
+    "serviceCostMillion": {
+      "type": "integer"
+    },
+    "contractNumber": {
+      "type": ["string", "null"]
+    },
+    "contractDate": {
+      "type": ["string", "null"]
+    },
+    "serviceStartDate": {
+      "type": ["string", "null"]
+    },
+    "serviceEndDate": {
+      "type": ["string", "null"]
+    },
+    "additionalAgreements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/AdditionalAgreement"
+      }
+    },
+    "commentsDateToAisEp": {
+      "type": ["string", "null"]
+    },
+    "author": {
+      "$ref": "#/definitions/Author"
+    },
+    "applicants": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Applicant"
+      }
+    },
+    "createDate": {
+      "type": "string"
+    },
+    "changeDate": {
+      "type": "string"
+    },
+    "deleted": {
+      "type": "boolean"
+    },
+    "objectDocuments": {
+      "type": "string"
+    },
+    "serviceDocsInfo": {
+      "type": "string"
+    },
+    "serviceType": {
+      "type": ["string", "null"]
+    },
+    "reqVersion": {
+      "type": "string"
+    },
+    "fromAISEP": {
+      "type": "boolean"
+    },
+    "conclusionFormed": {
+      "type": "boolean"
+    },
+    "conclusionId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "appealId",
+    "objectName",
+    "objectKind",
+    "appealNumber",
+    "createDate",
+    "changeDate",
+    "deleted",
+    "fromAISEP",
+    "conclusionFormed"
+  ],
+  "definitions": {
+    "IdNameCodeObject": {
+      "type": ["object", "null"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "code": {
+          "type": ["string", "null"]
+        }
+      },
+      "required": ["id", "name"]
+    },
+    "Address": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "subjectRFCode": {
+          "type": ["string", "null"]
+        },
+        "street": {
+          "type": ["string", "null"]
+        },
+        "houseLabel": {
+          "type": ["string", "null"]
+        },
+        "vladenieLabel": {
+          "type": ["string", "null"]
+        },
+        "korpusLabel": {
+          "type": ["string", "null"]
+        },
+        "stroenieLabel": {
+          "type": ["string", "null"]
+        },
+        "prefect": {
+          "type": ["object", "null"]
+        },
+        "district": {
+          "type": ["string", "null"]
+        },
+        "region": {
+          "type": ["string", "null"]
+        },
+        "city": {
+          "type": ["string", "null"]
+        },
+        "locality": {
+          "type": ["string", "null"]
+        },
+        "formedAddress": {
+          "type": ["string", "null"]
+        },
+        "addressOrientir": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "AdditionalAgreement": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "number": {
+          "type": "string"
+        },
+        "date": {
+          "type": "string"
+        },
+        "discardAdditionalAgreementDate": {
+          "type": "boolean"
+        },
+        "delete": {
+          "type": "boolean"
+        }
+      }
+    },
+    "Author": {
+      "type": "object",
+      "properties": {
+        "login": {
+          "type": "string"
+        },
+        "fio": {
+          "type": "string"
+        },
+        "email": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+    "Applicant": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "projectRole": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "site": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "delete": {
+          "type": "boolean"
+        },
+        "member": {
+          "$ref": "#/definitions/Member"
+        },
+        "createDate": {
+          "type": "string"
+        }
+      }
+    },
+    "Member": {
+      "type": "object",
+      "properties": {
+        "organizationMemberId": {
+          "type": "string"
+        },
+        "fio": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
