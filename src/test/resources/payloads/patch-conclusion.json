@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "generalInformationDim": "Сводная ЦИМ проекта представлена 2 файлами IFC (рисунок №).",
+    "generalInformationDem": null,
+    "attachments": []
+  },
+  "sections": {
+    "buildings": [],
+    "fileGroups": [
+      {
+        "fileGroupId": "{{fileGroupId1}}",
+        "generalInformation": "ЦИМ СПОЗУ представлена 1 файлами IFC (рисунок №).",
+        "attachments": []
+      },
+      {
+        "fileGroupId": "{{fileGroupId2}}",
+        "generalInformation": "ЦИМ ГП представлена 1 файлами IFC (рисунок №).",
+        "attachments": []
+      }
+    ]
+  },
+  "collisions": {
+    "generalInformation": null,
+    "matrixFiles": [],
+    "comment": null,
+    "attachments": []
+  },
+  "changesInfo": {
+    "includeIntoReport": false,
+    "changesInfoText": ""
+  },
+  "conclusionResult": {
+    "conclusionsText": null,
+    "recommendations": null,
+    "commonConclusionText": null
+  },
+  "participants": [
+    {
+      "id": "2ed20682-044c-4b25-9ee5-6d179e13a4d2",
+      "employeeId": "ac217174-a2a1-4695-97cf-4d792afebf15",
+      "sort": 1
+    },
+    {
+      "id": "cf427eae-88ae-493f-95ea-06c5e511c633",
+      "employeeId": "5ab805d1-2de3-43d4-be58-ed2c93b69fe8",
+      "sort": 2
+    },
+    {
+      "id": "54618691-ee9b-475e-a58d-af47e091cbfd",
+      "employeeId": "62441d9e-e1f9-457b-9b19-a7fa6863d5f2",
+      "sort": 3
+    }
+  ]
+}
