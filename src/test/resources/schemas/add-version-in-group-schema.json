@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "groupName": {
+      "type": "string"
+    },
+    "groupNick": {
+      "type": "string"
+    },
+    "file": {
+      "type": "object",
+      "properties": {
+        "fileId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "size": {
+          "type": "integer"
+        },
+        "extension": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
+        },
+        "author": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer"
+        },
+        "code": {
+          "type": "string"
+        },
+        "delete": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "fileId",
+        "size",
+        "extension",
+        "name",
+        "createDate",
+        "author",
+        "version",
+        "code",
+        "delete"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "groupName",
+    "groupNick",
+    "file"
+  ]
+}

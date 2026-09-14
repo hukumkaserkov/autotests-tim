@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "content": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "appealNumber": {
+            "type": ["null", "string"]
+          },
+          "caseNumber": {
+            "type": ["null", "string"]
+          },
+          "appealDate": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "objectNameAddress": {
+            "type": ["null", "string"]
+          },
+          "objectKind": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": ["null", "string"],
+                "format": "uuid"
+              },
+              "name": {
+                "type": ["null", "string"]
+              },
+              "code": {
+                "type": ["null", "string"]
+              }
+            }
+          },
+          "objectFunctionalPurpose": {
+            "type": ["null", "object", "string"]
+          },
+          "prefect": {
+            "type": ["null", "object", "string"]
+          },
+          "applicantOrgName": {
+            "type": ["null", "string"]
+          },
+          "applicantFio": {
+            "type": ["null", "string"]
+          },
+          "createDate": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?$"
+          },
+          "changeDate": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?$"
+          },
+          "filesIFC": {
+            "type": "integer"
+          },
+          "filesOther": {
+            "type": "integer"
+          },
+          "checkStarted": {
+            "type": "boolean"
+          },
+          "conclusionId": {
+            "type": ["null", "string"]
+          },
+          "conclusionFormed": {
+            "type": "boolean"
+          },
+          "fromAISEP": {
+            "type": "boolean"
+          },
+          "author": {
+            "type": "object",
+            "properties": {
+              "login": {
+                "type": ["null", "string"]
+              },
+              "fio": {
+                "type": ["null", "string"]
+              },
+              "email": {
+                "oneOf": [
+                  { "type": "string", "format": "email" },
+                  { "type": "string", "enum": [""] },
+                  { "type": "null" }
+                  ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "pageable": {
+      "type": "object",
+      "properties": {
+        "pageNumber": {
+          "type": "integer"
+        },
+        "pageSize": {
+          "type": "integer"
+        },
+        "sort": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "direction": {
+                "type": ["null", "string"]
+              },
+              "property": {
+                "type": ["null", "string"]
+              },
+              "ignoreCase": {
+                "type": "boolean"
+              },
+              "nullHandling": {
+                "type": ["null", "string"]
+              },
+              "descending": {
+                "type": "boolean"
+              },
+              "ascending": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "unpaged": {
+          "type": "boolean"
+        },
+        "paged": {
+          "type": "boolean"
+        }
+      }
+    },
+    "totalElements": {
+      "type": "integer"
+    },
+    "totalPages": {
+      "type": "integer"
+    },
+    "last": {
+      "type": "boolean"
+    },
+    "numberOfElements": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "number": {
+      "type": "integer"
+    },
+    "sort": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "type": ["null", "string"]
+          },
+          "property": {
+            "type": ["null", "string"]
+          },
+          "ignoreCase": {
+            "type": "boolean"
+          },
+          "nullHandling": {
+            "type": ["null", "string"]
+          },
+          "descending": {
+            "type": "boolean"
+          },
+          "ascending": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "first": {
+      "type": "boolean"
+    },
+    "empty": {
+      "type": "boolean"
+    }
+  }
+}
