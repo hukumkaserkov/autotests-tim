@@ -13,7 +13,7 @@ import org.junit.jupiter.api.BeforeAll;
 import transport.Transport;
 import utils.AllureRequestTime;
 
-public class BaseTest {
+public abstract class BaseTest {
 
     protected static String token;
     protected static Transport transport = new Transport();

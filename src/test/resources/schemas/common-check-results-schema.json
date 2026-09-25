@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "appealId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "dim": {
+      "type": "object",
+      "properties": {
+        "commonStatus": {
+          "type": ["null", "string"]
+        },
+        "checksStartedAt": {
+          "type": ["null", "string"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
+        },
+        "totalFiles": {
+          "type": ["null", "integer"]
+        },
+        "checkedFiles": {
+          "type": ["null", "integer"]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": ["null", "string"]
+              },
+              "type": {
+                "type": ["null", "string"]
+              },
+              "status": {
+                "type": ["null", "string"]
+              },
+              "sort": {
+                "type": ["null", "integer"]
+              },
+              "files": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": ["null", "string"],
+                      "format": "uuid"
+                    },
+                    "fileId": {
+                      "type": ["null", "string"],
+                      "format": "uuid"
+                    },
+                    "fileCheckResult": {
+                      "type": ["null", "string"]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "fileId",
+                    "fileCheckResult"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "commonStatus",
+        "checksStartedAt",
+        "totalFiles",
+        "checkedFiles",
+        "checks"
+      ]
+    },
+    "dem": {
+      "type": "object",
+      "properties": {
+        "commonStatus": {
+          "type": ["null", "string"]
+        },
+        "checksStartedAt": {
+          "type": ["null", "string"],
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
+        },
+        "totalFiles": {
+          "type": ["null", "integer"]
+        },
+        "checkedFiles": {
+          "type": ["null", "integer"]
+        },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": ["null", "string"]
+              },
+              "type": {
+                "type": ["null", "string"]
+              },
+              "status": {
+                "type": ["null", "string"]
+              },
+              "sort": {
+                "type": ["null", "integer"]
+              },
+              "files": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": ["null", "string"],
+                      "format": "uuid"
+                    },
+                    "fileId": {
+                      "type": ["null", "string"],
+                      "format": "uuid"
+                    },
+                    "fileCheckResult": {
+                      "type": ["null", "string"]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "fileId",
+                    "fileCheckResult"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "required": [
+        "commonStatus",
+        "checksStartedAt",
+        "totalFiles",
+        "checkedFiles",
+        "checks"
+      ]
+    }
+  },
+  "required": [
+    "appealId",
+    "dim",
+    "dem"
+  ]
+}

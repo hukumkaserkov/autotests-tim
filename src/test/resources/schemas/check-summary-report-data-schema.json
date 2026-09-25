@@ -1,0 +1,643 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "appealId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "dim": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "structureObjectKindId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "structureObjectKindName": {
+            "type": "string"
+          },
+          "shortName": {
+            "type": "string"
+          },
+          "additionalType": {
+            "type": "string"
+          },
+          "aggrData": {
+            "type": "object",
+            "properties": {
+              "absent": {
+                "type": "integer"
+              },
+              "incorrect": {
+                "type": "integer"
+              },
+              "lack": {
+                "type": "integer"
+              },
+              "correct": {
+                "type": "integer"
+              },
+              "total": {
+                "type": "integer"
+              },
+              "totalApplicable": {
+                "type": "integer"
+              },
+              "percentAbsent": {
+                "type": "number"
+              },
+              "percentIncorrect": {
+                "type": "number"
+              },
+              "percentLack": {
+                "type": "number"
+              },
+              "percentCorrect": {
+                "type": "number"
+              }
+            }
+          },
+          "buildings": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "appealFileGroups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "appealFileGroupId": {
+                  "type": "string",
+                  "format": "uuid"
+                },
+                "groupNick": {
+                  "type": "string"
+                },
+                "groupName": {
+                  "type": "string"
+                },
+                "groupShortName": {
+                  "type": "string"
+                },
+                "aggrData": {
+                  "type": "object",
+                  "properties": {
+                    "absent": {
+                      "type": "integer"
+                    },
+                    "incorrect": {
+                      "type": "integer"
+                    },
+                    "lack": {
+                      "type": "integer"
+                    },
+                    "correct": {
+                      "type": "integer"
+                    },
+                    "total": {
+                      "type": "integer"
+                    },
+                    "totalApplicable": {
+                      "type": "integer"
+                    },
+                    "percentAbsent": {
+                      "type": "number"
+                    },
+                    "percentIncorrect": {
+                      "type": "number"
+                    },
+                    "percentLack": {
+                      "type": "number"
+                    },
+                    "percentCorrect": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "filesTotalSpecs": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                },
+                "subGroups": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "appealFileGroupId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "groupNick": {
+                        "type": "string"
+                      },
+                      "groupName": {
+                        "type": "string"
+                      },
+                      "groupShortName": {
+                        "type": "string"
+                      },
+                      "aggrData": {
+                        "type": "object",
+                        "properties": {
+                          "absent": {
+                            "type": "integer"
+                          },
+                          "incorrect": {
+                            "type": "integer"
+                          },
+                          "lack": {
+                            "type": "integer"
+                          },
+                          "correct": {
+                            "type": "integer"
+                          },
+                          "total": {
+                            "type": "integer"
+                          },
+                          "totalApplicable": {
+                            "type": "integer"
+                          },
+                          "percentAbsent": {
+                            "type": "number"
+                          },
+                          "percentIncorrect": {
+                            "type": "number"
+                          },
+                          "percentLack": {
+                            "type": "number"
+                          },
+                          "percentCorrect": {
+                            "type": "number"
+                          }
+                        }
+                      },
+                      "filesTotalSpecs": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "prefix": {
+                              "type": "string"
+                            },
+                            "name": {
+                              "type": "string"
+                            },
+                            "ifcClass": {
+                              "type": "string"
+                            },
+                            "aggrData": {
+                              "type": "object",
+                              "properties": {
+                                "absent": {
+                                  "type": "integer"
+                                },
+                                "incorrect": {
+                                  "type": "integer"
+                                },
+                                "lack": {
+                                  "type": "integer"
+                                },
+                                "correct": {
+                                  "type": "integer"
+                                },
+                                "total": {
+                                  "type": "integer"
+                                },
+                                "totalApplicable": {
+                                  "type": "integer"
+                                },
+                                "percentAbsent": {
+                                  "type": "number"
+                                },
+                                "percentIncorrect": {
+                                  "type": "number"
+                                },
+                                "percentLack": {
+                                  "type": "number"
+                                },
+                                "percentCorrect": {
+                                  "type": "number"
+                                }
+                              }
+                            },
+                            "codes": {
+                              "type": "object",
+                              "properties": {
+                                "materialCodes": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object"
+                                  }
+                                },
+                                "elementCodes": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object"
+                                  }
+                                },
+                                "requirements": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object"
+                                  }
+                                }
+                              }
+                            },
+                            "childSpecs": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "prefix": {
+                                    "type": "string"
+                                  },
+                                  "name": {
+                                    "type": "string"
+                                  },
+                                  "aggrData": {
+                                    "type": "object",
+                                    "properties": {
+                                      "failedChecks": {
+                                        "type": "integer"
+                                      },
+                                      "passedChecks": {
+                                        "type": "integer"
+                                      },
+                                      "totalChecks": {
+                                        "type": "integer"
+                                      },
+                                      "totalApplicable": {
+                                        "type": "integer"
+                                      },
+                                      "percentLack": {
+                                        "type": "number"
+                                      },
+                                      "percentCorrect": {
+                                        "type": "number"
+                                      }
+                                    }
+                                  },
+                                  "codes": {
+                                    "type": "object",
+                                    "properties": {
+                                      "materialCodes": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object"
+                                        }
+                                      },
+                                      "elementCodes": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object"
+                                        }
+                                      },
+                                      "requirements": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "filesSpecs": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "fileId": {
+                                          "type": "string",
+                                          "format": "uuid"
+                                        },
+                                        "aggrData": {
+                                          "type": "object",
+                                          "properties": {
+                                            "failedChecks": {
+                                              "type": "integer"
+                                            },
+                                            "passedChecks": {
+                                              "type": "integer"
+                                            },
+                                            "totalChecks": {
+                                              "type": "integer"
+                                            },
+                                            "totalApplicable": {
+                                              "type": "integer"
+                                            },
+                                            "percentLack": {
+                                              "type": "number"
+                                            },
+                                            "percentCorrect": {
+                                              "type": "number"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "relatedParentSpecs": {
+                              "type": "array",
+                              "items": {
+                                "type": "object"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "subGroups": {
+                        "type": "array",
+                        "items": {
+                          "type": "object"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "dem": {
+      "type": "object",
+      "properties": {
+        "aggrData": {
+          "type": "object",
+          "properties": {
+            "absent": {
+              "type": "integer"
+            },
+            "incorrect": {
+              "type": "integer"
+            },
+            "lack": {
+              "type": "integer"
+            },
+            "correct": {
+              "type": "integer"
+            },
+            "total": {
+              "type": "integer"
+            },
+            "totalApplicable": {
+              "type": "integer"
+            },
+            "percentAbsent": {
+              "type": "number"
+            },
+            "percentIncorrect": {
+              "type": "number"
+            },
+            "percentLack": {
+              "type": "number"
+            },
+            "percentCorrect": {
+              "type": "number"
+            }
+          }
+        },
+        "appealFileGroups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "appealFileGroupId": {
+                "type": "string",
+                "format": "uuid"
+              },
+              "groupNick": {
+                "type": "string"
+              },
+              "groupName": {
+                "type": "string"
+              },
+              "groupShortName": {
+                "type": "string"
+              },
+              "aggrData": {
+                "type": "object",
+                "properties": {
+                  "absent": {
+                    "type": "integer"
+                  },
+                  "incorrect": {
+                    "type": "integer"
+                  },
+                  "lack": {
+                    "type": "integer"
+                  },
+                  "correct": {
+                    "type": "integer"
+                  },
+                  "total": {
+                    "type": "integer"
+                  },
+                  "totalApplicable": {
+                    "type": "integer"
+                  },
+                  "percentAbsent": {
+                    "type": "number"
+                  },
+                  "percentIncorrect": {
+                    "type": "number"
+                  },
+                  "percentLack": {
+                    "type": "number"
+                  },
+                  "percentCorrect": {
+                    "type": "number"
+                  }
+                }
+              },
+              "filesTotalSpecs": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "prefix": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "ifcClass": {
+                      "type": "string"
+                    },
+                    "aggrData": {
+                      "type": "object",
+                      "properties": {
+                        "absent": {
+                          "type": "integer"
+                        },
+                        "incorrect": {
+                          "type": "integer"
+                        },
+                        "lack": {
+                          "type": "integer"
+                        },
+                        "correct": {
+                          "type": "integer"
+                        },
+                        "total": {
+                          "type": "integer"
+                        },
+                        "totalApplicable": {
+                          "type": "integer"
+                        },
+                        "percentAbsent": {
+                          "type": "number"
+                        },
+                        "percentIncorrect": {
+                          "type": "number"
+                        },
+                        "percentLack": {
+                          "type": "number"
+                        },
+                        "percentCorrect": {
+                          "type": "number"
+                        }
+                      }
+                    },
+                    "codes": {
+                      "type": "object",
+                      "properties": {
+                        "materialCodes": {
+                          "type": "array",
+                          "items": {
+                            "type": "object"
+                          }
+                        },
+                        "elementCodes": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "requirements": {
+                          "type": "array",
+                          "items": {
+                            "type": "object"
+                          }
+                        }
+                      }
+                    },
+                    "childSpecs": {
+                      "type": "array",
+                      "items": {
+                        "type": "object"
+                      }
+                    },
+                    "relatedParentSpecs": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "prefix": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "ifcClass": {
+                            "type": "string"
+                          },
+                          "aggrData": {
+                            "type": "object",
+                            "properties": {
+                              "absent": {
+                                "type": "integer"
+                              },
+                              "incorrect": {
+                                "type": "integer"
+                              },
+                              "lack": {
+                                "type": "integer"
+                              },
+                              "correct": {
+                                "type": "integer"
+                              },
+                              "total": {
+                                "type": "integer"
+                              },
+                              "totalApplicable": {
+                                "type": "integer"
+                              },
+                              "percentAbsent": {
+                                "type": "number"
+                              },
+                              "percentIncorrect": {
+                                "type": "number"
+                              },
+                              "percentLack": {
+                                "type": "number"
+                              },
+                              "percentCorrect": {
+                                "type": "number"
+                              }
+                            }
+                          },
+                          "codes": {
+                            "type": "object",
+                            "properties": {
+                              "materialCodes": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object"
+                                }
+                              },
+                              "elementCodes": {
+                                "type": "array",
+                                "items": {
+                                  "type": "string"
+                                }
+                              },
+                              "requirements": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object"
+                                }
+                              }
+                            }
+                          },
+                          "childSpecs": {
+                            "type": "array",
+                            "items": {
+                              "type": "object"
+                            }
+                          },
+                          "relatedParentSpecs": {
+                            "type": "array",
+                            "items": {
+                              "type": "object"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "subGroups": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
