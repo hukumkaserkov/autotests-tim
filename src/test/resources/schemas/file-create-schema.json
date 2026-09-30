@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "jsonCustomData": {
+      "type": "null"
+    },
+    "signId": {
+      "type": "null"
+    },
+    "detached": {
+      "type": "null"
+    },
+    "dateOfSign": {
+      "type": "null"
+    },
+    "lastModify": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
+    },
+    "path": {
+      "type": "string"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "mimeType": {
+      "type": "string"
+    },
+    "ext": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "createDate": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
+    }
+  },
+  "required": [
+    "isSign",
+    "lastModify",
+    "path",
+    "size",
+    "mimeType",
+    "fileExt",
+    "name",
+    "id",
+    "createDate"
+  ]
+}
