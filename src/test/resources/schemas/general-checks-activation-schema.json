@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Generated Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "nick": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "fileExt": {
+      "type": "null"
+    },
+    "ifcVersion": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "fileSize": {
+      "type": "null"
+    },
+    "dateCreated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
+    },
+    "dateChanged": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d+$"
+    },
+    "modifiedBy": {
+      "type": "object",
+      "properties": {
+        "login": {
+          "type": "string"
+        },
+        "fio": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "login",
+        "fio"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "nick",
+    "name",
+    "description",
+    "active",
+    "ifcVersion",
+    "dateCreated",
+    "dateChanged",
+    "modifiedBy"
+  ]
+}
